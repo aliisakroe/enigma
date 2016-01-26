@@ -1,1 +1,7 @@
 # enigma
+
+This is an extra credit assignment from Intro to Programming at CU Boulder. It is a cryptography assignment, based on the Turing machine. In order to encrypt a phrase, after the enigma filename, this program takes 3 command line arguments as to the initial positions of each spinning rotor ( a value between 0 and 26 ). The fifth command line argument is a file that contains a phrase on a single line to be encrypted. The sixth argument is the name of the file in which the encrypted phrase should be written to. 
+
+The rotors all have alphabet characters at each index in the array. They each start at the initial position provided in the command line arguments. As each character from the phrase to be encrypted meets each rotor, it follows the index of the alphabetic character in a natural alphabetic sequence, to the character of that corresponding index in the next rotor. After the character has been translated through the three rotors, it reflects against another set reflector rotor, and follows the same logic back through the three rotors. The encrypted character is saved to the building encrypted phrase array and the rotors spin, so that the next character's positions will not be the same as the one prior. (That way multiple S's will not trace back to the same decrypted character, for example.) The first rotor spins with each encryption, the second rotor spins when the first one reaches 'R' and the third rotor spins when the second reaches 'F'. 
+
+To decrypt an encrypted message, the same starting rotor positions must be used. 
